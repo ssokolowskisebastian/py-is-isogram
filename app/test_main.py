@@ -22,5 +22,5 @@ def test_not_isogram() -> None:
 
 def test_mixed_case() -> None:
     assert is_isogram("Abcd")
-    assert is_isogram("Abba")
-    assert is_isogram("Oppo")
+    assert not is_isogram("Abba")
+    assert not is_isogram("Oppo")
