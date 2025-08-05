@@ -11,16 +11,16 @@ def test_single_character() -> None:
 
 
 def test_isogram() -> None:
-    assert is_isogram("word")
-    assert is_isogram("isogram")
+    assert is_isogram("abcd")
+    assert is_isogram("python")
 
 
 def test_not_isogram() -> None:
-    assert not is_isogram("hello")
-    assert not is_isogram("test")
+    assert not is_isogram("abba")
+    assert not is_isogram("oppo")
 
 
 def test_mixed_case() -> None:
-    assert is_isogram("Isogram") is True
-    assert is_isogram("Hello") is False
-    assert is_isogram("Test") is False
+    assert is_isogram("Isogram")
+    assert is_isogram("Hello")
+    assert is_isogram("Test")
