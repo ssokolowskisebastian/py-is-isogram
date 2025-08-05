@@ -1,24 +1,26 @@
 from app.main import is_isogram
 
 
-def test_is_isogram_true() -> None:
-    assert is_isogram("seba") is True
-    assert is_isogram("abcd") is True
-    assert is_isogram("qwertyuiop") is True
-    assert is_isogram("zxcvbnm") is True
-
-
-def test_is_isogram_false() -> None:
-    assert is_isogram("oppo") is False
-    assert is_isogram("look") is False
-    assert is_isogram("pineapple") is False
-
-
-def test_is_isogram_case_sensitive() -> None:
-    assert is_isogram("OpPo") is False
-    assert is_isogram("LOok") is False
-    assert is_isogram("pineapPle") is False
-
-
-def test_is_isogram_empty_string() -> None:
+def test_empty_string(self) -> None:
     assert is_isogram("") is True
+
+
+def test_single_character(self) -> None:
+    assert is_isogram("a") is True
+    assert is_isogram("b") is True
+
+
+def test_isogram(self) -> None:
+    assert is_isogram("word") is True
+    assert is_isogram("isogram") is True
+
+
+def test_not_isogram(self) -> None:
+    assert is_isogram("hello") is False
+    assert is_isogram("test") is False
+
+
+def test_mixed_case(self) -> None:
+    assert is_isogram("Isogram") is True
+    assert is_isogram("Hello") is False
+    assert is_isogram("Test") is False
